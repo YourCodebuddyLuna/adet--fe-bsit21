@@ -1,0 +1,22 @@
+<!-- HEADER -->
+<header class="page-header">
+  <h1>{{ headerTitle }}</h1>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="posts-container">
+
+  <article class="post-card" *ngFor="let post of posts; let i = index">
+    <div class="post-content">
+      <h2 class="post-title">{{ post.title }}</h2>
+      <p class="post-description">
+        {{ post.description }}
+      </p>
+    </div>
+
+    <button class="delete-btn" (click)="deletePost(i)">
+      Delete
+    </button>
+  </article>
+
+</main>
